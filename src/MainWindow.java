@@ -49,6 +49,7 @@ public class MainWindow {
   private final int outputFieldLength = 35;
   private final Color green = new Color(46,176,59);
   private final Color red = Color.RED;
+  private final Color blue = new Color(14,60,227);
 
   public MainWindow() {
     initialize();
@@ -439,8 +440,7 @@ public class MainWindow {
         
         JPanel wrapper = createPanel(null);
         JLabel totalLabel = createLabel("Total Spent:",null);
-        JLabel totalValue = createLabel(total.toString(),null);
-        totalValue.setForeground(new Color(14,60,227)); //blue
+        JLabel totalValue = createLabel(String.valueOf(round(total, 2)), blue);
         wrapper.add(totalLabel);
         wrapper.add(totalValue);
 
